@@ -11,12 +11,7 @@ namespace AppointmentsManager.Application.Appointments
     {
         public class Query : IRequest<Appointment>
         {
-            public Query(string id)
-            {
-                Id = id;
-            }
-
-            public string Id { get; }
+            public string Id { get; set;}
         }
 
         public class Handler : IRequestHandler<Query, Appointment>

@@ -30,7 +30,7 @@ namespace AppointmentsManager.Application.Tests.Appointments
             
             // when GetAppointmentQuery is executed
             var appointmentStorage = new FileSystemAppointmentStorage(tempPath){ AppointmentCatalogueFileName = catalogueFileName };
-            var query = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Query(appointment.Id);
+            var query = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Query { Id = appointment.Id};
             var queryHandler = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Handler(appointmentStorage);
             var result = await queryHandler.Handle(query, CancellationToken.None);            
             
@@ -53,7 +53,7 @@ namespace AppointmentsManager.Application.Tests.Appointments
             
             // when GetAppointmentQuery is executed with an arbitrary id
             var appointmentStorage = new FileSystemAppointmentStorage(tempPath){ AppointmentCatalogueFileName = catalogueFileName };
-            var query = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Query("123");
+            var query = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Query { Id = "123" };
             var queryHandler = new AppointmentsManager.Application.Appointments.GetAppointmentQuery.Handler(appointmentStorage);
             var result = await queryHandler.Handle(query, CancellationToken.None);            
             

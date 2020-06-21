@@ -8,5 +8,6 @@ namespace AppointmentsManager.Storage.Appointments
        Task<AppointmentSummary[]> GetAppointmentSummaries();
        Task<Appointment> GetAppointment(string id);
        Task Save(Appointment appointment);
+       Task Delete(string id);
    }
 }
