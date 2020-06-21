@@ -12,7 +12,7 @@ namespace AppointmentsManager.Storage.Appointments
    {
        private readonly string _storagePath;
 
-       private const string AppointmentCatalogueFileName = "appointment_catalogue.json";
+       public string AppointmentCatalogueFileName { get; set; } = "appointment_catalogue.json";
       
        public FileSystemAppointmentStorage(string storagePath)
        {

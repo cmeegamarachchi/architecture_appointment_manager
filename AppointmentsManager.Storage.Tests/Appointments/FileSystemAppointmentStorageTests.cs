@@ -12,6 +12,7 @@ namespace AppointmentsManager.Storage.Tests.Appointments
     public class FileSystemAppointmentStorageTests
     {
         [Test]
+        [Category("Integration")]
         public async Task Can_save_and_read_appointment()
         {
             var appointment = new Appointment();
@@ -35,6 +36,7 @@ namespace AppointmentsManager.Storage.Tests.Appointments
         }
         
         [Test]
+        [Category("Integration")]
         public async Task Adding_appointment_creates_appointment_summary()
         {
             var appointment = new Appointment();
@@ -54,6 +56,7 @@ namespace AppointmentsManager.Storage.Tests.Appointments
         }
         
         [Test]
+        [Category("Integration")]
         public async Task Deleting_appointment_deletes_appointment()
         {
             var tempPath = Path.GetTempPath();
@@ -82,6 +85,7 @@ namespace AppointmentsManager.Storage.Tests.Appointments
         }
         
         [Test]
+        [Category("Integration")]
         public async Task Updating_appointment_updates_appointment()
         {
             var tempPath = Path.GetTempPath();
