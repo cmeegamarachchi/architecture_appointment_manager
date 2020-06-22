@@ -10,3 +10,6 @@ Simple appointments manager application demonstrating best practices
  4. DevOps: Infrastructure is setup in code  
 
 [Developer journal](/docs/developer_journal.pdf)
+
+### Environment variables
+`FILESYSTEM_APPOINTMENT_STORAGE_BASE_FOLDER` Required by `FileSystemAppointmentStorage` to point to storage folder  
